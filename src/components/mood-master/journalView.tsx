@@ -40,7 +40,7 @@ const JournalView: React.FC = () => {
     { Icon: Meh, name: "Neutral", color: "gray" },
     { Icon: Frown, name: "Sad", color: "blue" },
     { Icon: Angry, name: "Awful", color: "red" },
-    { Icon: AlertCircle, name: "Shocked", color: "purple" }
+    // { Icon: AlertCircle, name: "Shocked", color: "purple" }
   ];
 
   useEffect(() => {
