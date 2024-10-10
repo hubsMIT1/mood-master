@@ -2,19 +2,13 @@
 import React, { useState } from 'react';
 import { 
   Calendar, PenTool, Settings, 
-Users, Activity, ArrowRight,
-
+Users, Activity, 
 } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+// import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 // import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 
 // Import additional components
-import {
-  
-  
-  
-  RegistrationScreen
-} from './additional-screen';
+import   RegistrationScreen from './additional-screen';
 
 import {SettingsView} from './settings'
 
@@ -27,7 +21,7 @@ import CommunityView from './communityView'
 
 const MoodTrackerApp = () => {
   const [currentView, setCurrentView] = useState('welcome');
-  const [selectedMood, setSelectedMood] = useState(null);
+  // const [selectedMood, setSelectedMood] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 //   const [currentView, setCurrentView] = useState('welcome');  // Update the default if needed
 
@@ -94,81 +88,81 @@ const MoodTrackerApp = () => {
   );
 
   // Insights View (User Stories 6, 9)
-  const InsightsView = () => (
-    <div className="p-4 max-w-md mx-auto mb-20">
-      <h2 className="text-2xl font-bold mb-6">Your Insights</h2>
+  // const InsightsView = () => (
+  //   <div className="p-4 max-w-md mx-auto mb-20">
+  //     <h2 className="text-2xl font-bold mb-6">Your Insights</h2>
       
-      <Card className="mb-6">
-        <CardHeader>
-          <CardTitle>Mood Trends</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="h-40 flex items-end justify-between gap-2">
-            {['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map((day, i) => (
-              <div key={day} className="flex flex-col items-center flex-1">
-                <div 
-                  className="w-full bg-blue-500 rounded-t-md" 
-                  style={{ height: `${Math.random() * 100}%` }}
-                />
-                <span className="text-xs mt-2">{day}</span>
-              </div>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
+  //     <Card className="mb-6">
+  //       <CardHeader>
+  //         <CardTitle>Mood Trends</CardTitle>
+  //       </CardHeader>
+  //       <CardContent>
+  //         <div className="h-40 flex items-end justify-between gap-2">
+  //           {['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map((day, i) => (
+  //             <div key={day} className="flex flex-col items-center flex-1">
+  //               <div 
+  //                 className="w-full bg-blue-500 rounded-t-md" 
+  //                 style={{ height: `${Math.random() * 100}%` }}
+  //               />
+  //               <span className="text-xs mt-2">{day}</span>
+  //             </div>
+  //           ))}
+  //         </div>
+  //       </CardContent>
+  //     </Card>
 
-      <Card className="mb-6">
-        <CardHeader>
-          <CardTitle>Activity Impact</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-4">
-            {[
-              { name: 'Exercise', impact: 75 },
-              { name: 'Sleep', impact: 80 },
-              { name: 'Nutrition', impact: 65 },
-              { name: 'Meditation', impact: 70 }
-            ].map((activity) => (
-              <div key={activity.name}>
-                <div className="flex justify-between mb-1">
-                  <span>{activity.name}</span>
-                  <span className="text-green-500">+{activity.impact}% positive impact</span>
-                </div>
-                <div className="w-full bg-gray-200 rounded-full h-2">
-                  <div 
-                    className="bg-green-500 h-2 rounded-full" 
-                    style={{ width: `${activity.impact}%` }} 
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
+  //     <Card className="mb-6">
+  //       <CardHeader>
+  //         <CardTitle>Activity Impact</CardTitle>
+  //       </CardHeader>
+  //       <CardContent>
+  //         <div className="space-y-4">
+  //           {[
+  //             { name: 'Exercise', impact: 75 },
+  //             { name: 'Sleep', impact: 80 },
+  //             { name: 'Nutrition', impact: 65 },
+  //             { name: 'Meditation', impact: 70 }
+  //           ].map((activity) => (
+  //             <div key={activity.name}>
+  //               <div className="flex justify-between mb-1">
+  //                 <span>{activity.name}</span>
+  //                 <span className="text-green-500">+{activity.impact}% positive impact</span>
+  //               </div>
+  //               <div className="w-full bg-gray-200 rounded-full h-2">
+  //                 <div 
+  //                   className="bg-green-500 h-2 rounded-full" 
+  //                   style={{ width: `${activity.impact}%` }} 
+  //                 />
+  //               </div>
+  //             </div>
+  //           ))}
+  //         </div>
+  //       </CardContent>
+  //     </Card>
 
-      <Card>
-        <CardHeader>
-          <CardTitle>Recommendations</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <ul className="space-y-3">
-            <li className="flex items-start">
-              <ArrowRight className="mr-2 mt-1 flex-shrink-0 text-blue-500" />
-              <span>Try meditation before bed to improve sleep quality</span>
-            </li>
-            <li className="flex items-start">
-              <ArrowRight className="mr-2 mt-1 flex-shrink-0 text-blue-500" />
-              <span>Schedule regular exercise for mood stability</span>
-            </li>
-            <li className="flex items-start">
-              <ArrowRight className="mr-2 mt-1 flex-shrink-0 text-blue-500" />
-              <span>Consider journaling in the morning to start your day mindfully</span>
-            </li>
-          </ul>
-        </CardContent>
-      </Card>
-    </div>
-  );
+  //     <Card>
+  //       <CardHeader>
+  //         <CardTitle>Recommendations</CardTitle>
+  //       </CardHeader>
+  //       <CardContent>
+  //         <ul className="space-y-3">
+  //           <li className="flex items-start">
+  //             <ArrowRight className="mr-2 mt-1 flex-shrink-0 text-blue-500" />
+  //             <span>Try meditation before bed to improve sleep quality</span>
+  //           </li>
+  //           <li className="flex items-start">
+  //             <ArrowRight className="mr-2 mt-1 flex-shrink-0 text-blue-500" />
+  //             <span>Schedule regular exercise for mood stability</span>
+  //           </li>
+  //           <li className="flex items-start">
+  //             <ArrowRight className="mr-2 mt-1 flex-shrink-0 text-blue-500" />
+  //             <span>Consider journaling in the morning to start your day mindfully</span>
+  //           </li>
+  //         </ul>
+  //       </CardContent>
+  //     </Card>
+  //   </div>
+  // );
   // Navigation Bar
   const NavigationBar = () => (
     <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4">

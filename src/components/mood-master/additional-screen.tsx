@@ -242,6 +242,4 @@ export const RegistrationScreen: React.FC<RegistrationScreenProps> = ({ onRegist
     );
   };
 
-export default {
-  RegistrationScreen
-};
+export default  RegistrationScreen

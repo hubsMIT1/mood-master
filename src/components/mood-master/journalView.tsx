@@ -107,7 +107,7 @@ const JournalView: React.FC = () => {
   return (
     <div className="p-4 max-w-md mx-auto mb-20">
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-bold">Today's Entry</h1>
+        <h1 className="text-2xl font-bold">{`Today's Entry`}</h1>
         <BellRing className="text-gray-500" />
       </div>
 
@@ -258,7 +258,7 @@ const JournalView: React.FC = () => {
       )}
 
       <Button className="w-full" onClick={saveJournalEntry}>
-        Save Today's Entry <ArrowRight className="ml-2" />
+        {`Save Today's Entry`} <ArrowRight className="ml-2" />
       </Button>
     </div>
   );

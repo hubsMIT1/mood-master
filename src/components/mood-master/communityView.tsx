@@ -117,7 +117,7 @@ const CommunityView: React.FC = () => {
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>{user.id}'s Profile</DialogTitle>
+          <DialogTitle>{user.id}&apos;s Profile</DialogTitle>
         </DialogHeader>
         <div className="space-y-4">
           <p>Joined: {user.joinedDate.toDateString()}</p>
